@@ -24,10 +24,7 @@ function showTooltip(event) {
     // Check if this URL is Internal link.
     let domain_link = new URL(post_url);
     domain_link = domain_link.hostname;
-    if ( window.location.hostname == domain_link) {
-        console.log('YES, is Internal link!')
-    } else {
-        console.log('Sorry, is external link!')
+    if ( window.location.hostname != domain_link) {
         return;
     }
 
